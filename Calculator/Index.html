@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html  ng-app="calculatorApp">
+<head>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>  
-<script src="addition.js"></script>
-<script src="subtraction.js"></script>
-<script src="multi.js"></script>
-<script src="division.js"></script>
-<script src="percentile.js"></script>
+<script src="ArithmeticOperation.js"></script>
+
 <title>Calculator</title>
+</head>
 <body>
 
-<p>This porject performs basic Airthmetic operations</p>
-<div ng-app="calculatorApp" ng-controller="operations">
+<p>This App performs basic Airthmetic operations</p>
+<div ng-controller="operations">
 
 <input type="text" id="valueOne" ng-model="valueOne" />  
 <input type="text" id="valueTwo" ng-model="valueTwo" /> <br/><br/>
-
+<p>ValueOne: {{valueOne}} <br/>	ValueTwo: {{valueTwo}}</p>
 <p>Total value: </p><input type="text" id="res" ng-model="result"><br/
 <br/>
-
-
 
  <button type="button" ng-click="Addition(valueOne, valueTwo)">ADD</button>
  <button type="button" ng-click='SUB(valueOne, valueTwo)' >SUB</button>
