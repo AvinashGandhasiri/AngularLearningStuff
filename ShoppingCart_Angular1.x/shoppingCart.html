@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myShoppingCart">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="shoppingCart.js"></script>
+<link rel="stylesheet" href="shopping.css">
+
+<title>Shopping cart</title>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="shoppingCart.js"></script>
+
+
+<title>Shopping cart</title>
+
+
+
+
+<body ng-controller="myShpngCart">
+
+
+	<input type="text" name="enterItem" ng-model="enterItem" value="Enter a item" required="required" >
+	<button ng-click="addItem(enterItem)">ADD</button> <br/>
+
+
+	<br/>
+	<table>
+	<tr>
+	  <th>Items In List </th>
+	</tr>
+	<tr>
+	  <td ng-repeat="x in products">{{x}}<span ng-click="removeItem($index)">X</span></td>
+	</tr>
+	
+	</table>
+
+	<h2>{{errorMessage}}</h2>
+	
+</body>
+</html>
